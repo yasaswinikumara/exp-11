@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ticket Booking – Demo</title>
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --panel:#111827;      /* gray-900 */
+      --muted:#64748b;      /* slate-500 */
+      --text:#e5e7eb;       /* gray-200 */
+      --accent:#22c55e;     /* green-500 */
+      --accent-2:#06b6d4;   /* cyan-500 */
+      --danger:#ef4444;     /* red-500 */
+      --ring:#334155;       /* slate-700 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% 0%,#0b1222,#0a0f1c),var(--bg);color:var(--text)}
+    .container{max-width:1100px;margin:40px auto;padding:0 16px}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+    header .logo{inline-size:40px;block-size:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#04210e;font-weight:800}
+    h1{font-size:clamp(1.4rem,2.5vw,2rem);margin:0}
+    p.lead{margin:.2rem 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(148,163,184,.2);backdrop-filter:blur(6px);border-radius:18px;padding:18px;box-shadow:0 10px 35px rgba(0,0,0,.25)}
+    .card h2{font-size:1.1rem;margin:6px 0 14px}
+
+    form{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    label{font-size:.84rem;color:#cbd5e1}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .span-6{grid-column:span 6}
+    .span-4{grid-column:span 4}
+    .span-3{grid-column:span 3}
+    .span-8{grid-column:span 8}
+    .span-12{grid-column:1/-1}
+    @media (max-width:720px){.span-6,.span-4,.span-3,.span-8{grid-column:1/-1}}
+
+    input,select{appearance:none;border:1px solid var(--ring);background:#0b1220;color:var(--text);padding:12px 12px;border-radius:12px;outline:none}
+    input:focus,select:focus{border-color:var(--accent-2);box-shadow:0 0 0 3px rgba(6,182,212,.2)}
+
+    .inline{display:flex;gap:10px;align-items:center}
